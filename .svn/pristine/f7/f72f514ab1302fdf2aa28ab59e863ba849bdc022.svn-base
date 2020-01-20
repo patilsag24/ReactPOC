@@ -1,0 +1,14 @@
+import React,{Component} from 'react';
+
+class ButtonsContainer extends Component{
+    render(){
+        return(
+            <div>
+                <button type="button" onClick={this.props.onAddCategoryClick}>Add Category</button>
+            </div>
+        );
+    }
+
+}
+
+export default ButtonsContainer;

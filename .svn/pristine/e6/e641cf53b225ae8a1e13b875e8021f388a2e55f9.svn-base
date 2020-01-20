@@ -1,0 +1,20 @@
+import React,{Component} from 'react';
+
+class CategoryRow extends Component
+{  
+    render(){
+        var category=this.props.category;
+        return( 
+            <tr>
+                <td>{category.Name}</td>
+                <td>{category.NumberOfQuestions}</td>
+                <td>{category.Status == 0 ? "Draft" : "Active"}</td>
+                <td>
+                    <input type="button" ref="categoryName" value="Update" id="btnFAQTopicUpdate" onClick={this.props.onCategoryRowUpdateClick}/>
+                </td>
+            </tr>
+        );
+    }
+}
+
+export default CategoryRow;
